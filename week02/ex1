@@ -2,11 +2,24 @@
 
 <head>
     <script>
-    <button>計算</button>
+    function a(){
+    var x = document.getElementById('tf1').value;
+    x=Number(x);
+    var y = document.getElementById('tf2').value;
+    y=Number(y);
+    var ans=x/(x+y)*100;
+    document.getElementById('tf3').value=ans;
+    }
     </script>
 </head>
 
 <body>
+<p>勝数:<input id="tf1" type="text"></p>
+<p>負数:<input id="tf2" type="text"></p>
+<button onclick="a()">計算</button>
+<p>勝率は<input id="tf3" type="text">%です</p>
+
+
 </body>
 
 </html>

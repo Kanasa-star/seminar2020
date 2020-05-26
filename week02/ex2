@@ -2,10 +2,24 @@
 
 <head>
     <script>
+    function a(){
+    var x = document.getElementById('tf1').value;
+    x=Number(x);
+    var y = document.getElementById('tf2').value;
+    y=Number(y);
+    var ans=y/(x*x/10000);
+    document.getElementById('tf3').value=ans;
+    }
     </script>
 </head>
 
 <body>
+<p>身長:<input id="tf1" type="text">cm</p>
+<p>体重:<input id="tf2" type="text">kg</p>
+<button onclick="a()">計算</button>
+<p>BMIは<input id="tf3" type="text">です</p>
+
+
 </body>
 
 </html>
