@@ -1,0 +1,36 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+
+    <script>
+      var ctx=0;   
+      var x=0;
+      var y=0;   
+      function buttonAPressed(){
+      x=Math.floor(Math.random()*400);
+      y=Math.floor(Math.random()*300);
+      
+    ctx=document.getElementById('canvas1').getContext('2d');
+      }
+      ctx.fillStyle='#0000FF';
+      ctx.beginPath();
+      ctx.arc(x, y, 5, 0, Math.PI * 2);
+      ctx.fill();
+      
+      function buttonBPressed(){
+ctx.clearRect(0,0,400,300);
+      }
+    </script>
+</head>
+
+<body>
+<button onclick="buttonAPressed()">A</button>
+<button onclick="buttonBPressed()">B</button>
+<canvas id ="canvas1" width="400" height="300" style="border: solid 1px;"><c/anvas>
+<hr>
+
+
+</body>
+
+</html>
